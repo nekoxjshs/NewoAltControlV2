@@ -1,5 +1,5 @@
 -- URL of the raw Gist content
-local gistUrl = "https://raw.githubusercontent.com/Zxlono/varsitydhc/main/key"
+local gistUrl = "https://raw.githubusercontent.com/nekoxjshs/NewoAltControlV2/main/key"
 
 -- Function to fetch and check the key
 local function checkKey()
