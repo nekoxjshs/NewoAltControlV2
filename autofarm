@@ -1,12 +1,12 @@
 --[[ 
-(this made by  Applless Aka Czo)
+    this made by czo
 ]]
 
 if (_G.EXC ~= nil) then
 	warn("already executed")
 	return 
 else 
-	_G.EXC = "@trans"
+	_G.EXC = "@kdot"
 end
 
 
@@ -696,7 +696,7 @@ HPT.Size = UDim2.new(1, 0, 1, 0)
 TOOLTIP.BackgroundTransparency = 0.2
 SG.IgnoreGuiInset = true 
 MS.Parent = M
-USER.Text = "| Username - @CZXPEK"
+USER.Text = "| Username - @NEWO"
 
 --SG.Enabled = false
 
@@ -705,7 +705,7 @@ local Players = game:GetService("Players")
 local Cashiers = workspace.Cashiers
 local Player = Players.LocalPlayer
 
-if (_G.AutofarmSettings.Credits ~= "iku autofarm - by @trans") then 
+if (_G.AutofarmSettings.Credits ~= "Newo autofarm - by @Kdot") then 
 	Player:Kick("dont edit the credits in the config you stupid jew")
 	task.wait(10)
 	Cashiers:Destroy()
@@ -839,7 +839,7 @@ local GetCloseCash = function()
 	return Am
 end
 
-local SendLog = loadstring(game:HttpGet("https://github.com/applless/RandomScripts/raw/main/Webhookk"))()
+local SendLog = loadstring(game:HttpGet("https://raw.githubusercontent.com/nekoxjshs/random/main/webhook"))()
 
 local Attack = function()
 	local Mode = tonumber(_G.AutofarmSettings.AttackMode)
@@ -1008,7 +1008,7 @@ end)
 task.spawn(function()
 	while true and task.wait(_G.AutofarmSettings.LogInterval * 60) do
         local s, e = pcall(function()
-            SendLog(_G.AutofarmSettings.Webhook, {Player.Name, Player.UserId, WALLET.Text, PROFIT.Text, TIMER.Text, BROKEN.Text, "| iku autofarm by @trans"})
+            SendLog(_G.AutofarmSettings.Webhook, {Player.Name, Player.UserId, WALLET.Text, PROFIT.Text, TIMER.Text, BROKEN.Text, "| Newo autofarm by @"})
         end)
         if (e) then 
             Log("error while sending log:\n"..tostring(e).."\n")
