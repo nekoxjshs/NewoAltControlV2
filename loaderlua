@@ -1,0 +1,32 @@
+-- URL of the raw Gist content
+local gistUrl = "https://raw.githubusercontent.com/Zxlono/varsitydhc/main/key"
+
+-- Function to fetch and check the key
+local function checkKey()
+    local validKeysScript = game:HttpGet(gistUrl)
+    local validKeys = loadstring(validKeysScript)()
+
+    -- Check if the provided key is in the list of valid keys
+    local isValid = false
+    for _, validKey in pairs(validKeys) do
+        if getgenv().key == validKey then
+            isValid = true
+            break
+        end
+    end
+
+    return isValid
+end
+
+-- Execute actions based on key validity
+if checkKey() then
+    print("Key is valid.")
+    -- Run the script for a valid key
+    game:GetService("RunService"):Set3dRenderingEnabled(false)
+    settings().Rendering.QualityLevel = 1
+    UserSettings().GameSettings.MasterVolume = 0
+else
+    print("Key is not valid.")
+    -- Kick the player for an invalid key
+    game.Players.LocalPlayer:Kick("INVALID KEY")
+end
