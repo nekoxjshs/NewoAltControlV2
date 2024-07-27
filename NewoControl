@@ -1,0 +1,232 @@
+-- Load Anti-Cheat Bypass
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MsorkyScripts/OpenSourceAntiCheat/main/AntiCheatBypass.txt"))()
+
+-- Function to position alt accounts at bank or club
+local function setupLocation(location)
+    local cframes = {
+        bank = {
+            Alt1 = CFrame.new(-388.8700256347656, 21.248018264770508, -339.34368896484375),
+            Alt2 = CFrame.new(-381.8700256347656, 21.248018264770508, -339.34368896484375),
+Alt3 = CFrame.new(-373.8700256347656, 21.248018264770508, -339.34368896484375),
+Alt4 = CFrame.new(-365.8700256347656, 21.248018264770508, -339.34368896484375),
+Alt5 = CFrame.new(-358.8700256347656, 21.248018264770508, -339.34368896484375),
+Alt6 = CFrame.new(-388.8700256347656, 21.248018264770508, -331.34368896484375),
+Alt7 = CFrame.new(-381.8700256347656, 21.248018264770508, -331.34368896484375),
+Alt8 = CFrame.new(-373.8700256347656, 21.248018264770508, -331.34368896484375),
+Alt9 = CFrame.new(-365.8700256347656, 21.248018264770508, -331.34368896484375),
+Alt10 = CFrame.new(-358.8700256347656, 21.248018264770508, -331.34368896484375),
+Alt11 = CFrame.new(-388.8700256347656, 21.248018264770508, -323.34368896484375),
+Alt12 = CFrame.new(-381.8700256347656, 21.248018264770508, -323.34368896484375),
+Alt13 = CFrame.new(-373.8700256347656, 21.248018264770508, -323.34368896484375),
+Alt14 = CFrame.new(-365.8700256347656, 21.248018264770508, -323.34368896484375),
+Alt15 = CFrame.new(-358.8700256347656, 21.248018264770508, -323.34368896484375),
+Alt16 = CFrame.new(-388.8700256347656, 21.248018264770508, -315.34368896484375),
+Alt17 = CFrame.new(-381.8700256347656, 21.248018264770508, -315.34368896484375),
+Alt18 = CFrame.new(-373.8700256347656, 21.248018264770508, -315.34368896484375),
+Alt19 = CFrame.new(-365.8700256347656, 21.248018264770508, -315.34368896484375),
+Alt20 = CFrame.new(-358.8700256347656, 21.248018264770508, -315.34368896484375),
+Alt21 = CFrame.new(-388.8700256347656, 21.248018264770508, -307.34368896484375),
+Alt22 = CFrame.new(-381.8700256347656, 21.248018264770508, -307.34368896484375),
+Alt23 = CFrame.new(-373.8700256347656, 21.248018264770508, -307.34368896484375),
+Alt24 = CFrame.new(-365.8700256347656, 21.248018264770508, -307.34368896484375),
+Alt25 = CFrame.new(-358.8700256347656, 21.248018264770508, -307.34368896484375),
+Alt26 = CFrame.new(-388.8700256347656, 21.248018264770508, -299.34368896484375),
+Alt27 = CFrame.new(-381.8700256347656, 21.248018264770508, -299.34368896484375),
+Alt28 = CFrame.new(-373.8700256347656, 21.248018264770508, -299.34368896484375),
+Alt29 = CFrame.new(-365.8700256347656, 21.248018264770508, -299.34368896484375),
+Alt30 = CFrame.new(-358.8700256347656, 21.248018264770508, -299.34368896484375),
+Alt31 = CFrame.new(-388.8700256347656, 21.248018264770508, -291.34368896484375),
+Alt32 = CFrame.new(-381.8700256347656, 21.248018264770508, -291.34368896484375),
+Alt33 = CFrame.new(-373.8700256347656, 21.248018264770508, -291.34368896484375),
+Alt34 = CFrame.new(-365.8700256347656, 21.248018264770508, -291.34368896484375),
+Alt35 = CFrame.new(-358.8700256347656, 21.248018264770508, -291.34368896484375)
+        },
+        club = {
+            Alt1 = CFrame.new(-292.4909362792969, -6.21032190322876, -405.8453369140625),
+            Alt2 = CFrame.new(-284.4909362792969, -6.21032190322876, -405.8453369140625),
+Alt3 = CFrame.new(-276.4909362792969, -6.21032190322876, -405.8453369140625),
+Alt4 = CFrame.new(-268.4909362792969, -6.21032190322876, -405.8453369140625),
+Alt5 = CFrame.new(-260.4909362792969, -6.21032190322876, -405.8453369140625),
+Alt6 = CFrame.new(-252.49093627929688, -6.21032190322876, -405.8453369140625),
+Alt7 = CFrame.new(-244.49093627929688, -6.21032190322876, -405.8453369140625),
+Alt8 = CFrame.new(-236.49093627929688, -6.21032190322876, -405.8453369140625),
+Alt9 = CFrame.new(-228.49093627929688, -6.21032190322876, -405.8453369140625),
+Alt10 = CFrame.new(-220.49093627929688, -6.21032190322876, -405.8453369140625),
+Alt11 = CFrame.new(-292.4909362792969, -6.21032190322876, -402.3453369140625),
+Alt12 = CFrame.new(-284.4909362792969, -6.21032190322876, -402.3453369140625),
+Alt13 = CFrame.new(-276.4909362792969, -6.21032190322876, -402.3453369140625),
+Alt14 = CFrame.new(-268.4909362792969, -6.21032190322876, -402.3453369140625),
+Alt15 = CFrame.new(-260.4909362792969, -6.21032190322876, -402.3453369140625),
+Alt16 = CFrame.new(-252.49093627929688, -6.21032190322876, -402.3453369140625),
+Alt17 = CFrame.new(-244.49093627929688, -6.21032190322876, -402.3453369140625),
+Alt18 = CFrame.new(-236.49093627929688, -6.21032190322876, -402.3453369140625),
+Alt19 = CFrame.new(-228.49093627929688, -6.21032190322876, -402.3453369140625),
+Alt20 = CFrame.new(-220.49093627929688, -6.21032190322876, -402.3453369140625),
+Alt21 = CFrame.new(-292.4909362792969, -6.21032190322876, -398.8453369140625),
+Alt22 = CFrame new(-284.4909362792969, -6.21032190322876, -398.8453369140625),
+Alt23 = CFrame.new(-276.4909362792969, -6.21032190322876, -398.8453369140625),
+Alt24 = CFrame.new(-268.4909362792969, -6.21032190322876, -398.8453369140625),
+Alt25 = CFrame.new(-260.4909362792969, -6.21032190322876, -398.8453369140625),
+Alt26 = CFrame.new(-252.49093627929688, -6.21032190322876, -398.8453369140625),
+Alt27 = CFrame.new(-244.49093627929688, -6.21032190322876, -398.8453369140625),
+Alt28 = CFrame.new(-236.49093627929688, -6.21032190322876, -398.8453369140625),
+Alt29 = CFrame.new(-228.49093627929688, -6.21032190322876, -398.8453369140625),
+Alt30 = CFrame.new(-220.49093627929688, -6.21032190322876, -398.8453369140625),
+Alt31 = CFrame.new(-292.4909362792969, -6.21032190322876, -395.3453369140625),
+Alt32 = CFrame.new(-284.4909362792969, -6.21032190322876, -395.3453369140625),
+Alt33 = CFrame.new(-276.4909362792969, -6.21032190322876, -395.3453369140625),
+Alt34 = CFrame.new(-268.4909362792969, -6.21032190322876, -395.3453369140625),
+Alt35 = CFrame.new(-260.4909362792969, -6.21032190322876, -395.3453369140625)
+        }
+    }
+
+    for i, v in pairs(getgenv().alts) do
+        local userId = game.Players.LocalPlayer.UserId
+        if v == userId then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cframes[location][i]
+        end
+    end
+end
+
+-- Dropping Money Variables
+local isDropping = false
+local dropAmount = 10000 -- Amount for dropping
+local taxRate = 0.85 -- Tax rate
+
+-- Handle dropping and stopping of dropping money
+local function handleDropCommand(command)
+    if command == getgenv().prefix .. "drop" then
+        isDropping = true
+        while isDropping and game.Players.LocalPlayer.DataFolder.Currency.Value >= dropAmount do
+            game.ReplicatedStorage.MainEvent:FireServer("DropMoney", dropAmount)
+            wait(15) -- Adjust wait time for dropping frequency
+        end
+    elseif command == getgenv().prefix .. "stop drop" then
+        isDropping = false
+    end
+end
+
+-- Handle airlock command
+local function handleAirlockCommand(start)
+    local localPlayer = game.Players.LocalPlayer
+    if start then
+        -- Enabling airlock
+        local BP = Instance.new("BodyPosition", localPlayer.Character.HumanoidRootPart)
+        BP.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+        BP.Position = localPlayer.Character.HumanoidRootPart.Position + Vector3.new(0, 10, 0)
+    else
+        -- Disabling airlock
+        local BP = localPlayer.Character.HumanoidRootPart:FindFirstChild("BodyPosition")
+        if BP then BP:Destroy() end
+    end
+end
+
+-- Function to handle grave command
+local function handleGraveCommand(location)
+    local localPlayer = game.Players.LocalPlayer
+    local depth = (location == "club") and 8 or 14 -- 8 at club, 14 at bank
+    local humanoidRootPart = localPlayer.Character.HumanoidRootPart
+    humanoidRootPart.CFrame = humanoidRootPart.CFrame - Vector3.new(0, depth, 0)
+    for _, v in pairs(localPlayer.Character:GetDescendants()) do
+        if v:IsA("BasePart") then v.CanCollide = false end
+    end
+    local BP = Instance.new("BodyPosition", humanoidRootPart)
+    BP.MaxForce = Vector3.new(0, math.huge, 0)
+    BP.Position = humanoidRootPart.Position
+end
+
+-- Function to handle wallet commands
+local function handleWalletCommand(command)
+    local localPlayer = game.Players.LocalPlayer
+    local walletInBackpack = localPlayer.Backpack:FindFirstChild("Wallet")
+    local walletInCharacter = localPlayer.Character:FindFirstChild("Wallet")
+    if command == getgenv().prefix .. "wallet on" and walletInBackpack then
+        walletInBackpack.Parent = localPlayer.Character
+    elseif command == getgenv().prefix .. "wallet off" and walletInCharacter then
+        walletInCharacter.Parent = localPlayer.Backpack
+    end
+end
+
+-- Function to handle redeem codes
+local function handleRedeemCommand(code)
+    local localPlayer = game.Players.LocalPlayer
+    game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode", code)
+end
+
+-- Function to reset alt accounts and disable airlock
+local function resetAltAccounts()
+    for _, altPlayer in pairs(game.Players:GetPlayers()) do
+        if getgenv().alts[altPlayer.Name] then
+            local BP = altPlayer.Character.HumanoidRootPart:FindFirstChild("BodyPosition")
+            if BP then BP:Destroy() end
+        end
+    end
+    handleAirlockCommand(false)
+end
+
+-- Function to process chat messages and commands
+local function onPlayerChatted(player, message)
+    if player.UserId == getgenv().controller then
+        local command = message:lower()
+        if command == getgenv().prefix .. "setup bank" then
+            setupLocation("bank")
+        elseif command == getgenv().prefix .. "setup club" then
+            setupLocation("club")
+        elseif command == getgenv().prefix .. "airlock" then
+            handleAirlockCommand(true)
+        elseif command == getgenv().prefix .. "stop airlock" then
+            handleAirlockCommand(false)
+        elseif command == getgenv().prefix .. "drop" or command == getgenv().prefix .. "stop drop" then
+            handleDropCommand(command)
+        elseif command == getgenv().prefix .. "grave" then
+            local location = player.Character.HumanoidRootPart.Position.Z > -100 and "bank" or "club"
+            handleGraveCommand(location)
+        elseif command == getgenv().prefix .. "reset" then
+            resetAltAccounts()
+        elseif command == getgenv().prefix .. "wallet on" or command == getgenv().prefix .. "wallet off" then
+            handleWalletCommand(command)
+        elseif command:sub(1, #getgenv().prefix + 6) == getgenv().prefix .. "redeem" then
+            local code = command:sub(#getgenv().prefix + 8)
+            handleRedeemCommand(code)
+        end
+    end
+end
+
+-- Connect PlayerAdded to all current and new players
+local GetPlayers = game.Players:GetPlayers()
+for i = 1, #GetPlayers do
+    local Player = GetPlayers[i]
+    coroutine.resume(coroutine.create(function()
+        Player.Chatted:Connect(function(message)
+            onPlayerChatted(Player, message)
+        end)
+    end))
+end
+game.Players.PlayerAdded:Connect(function(player)
+    player.Chatted:Connect(function(message)
+        onPlayerChatted(player, message)
+    end)
+end)
+
+-- Function to control the FPS
+local function controlFPS()
+    local RunService = game:GetService("RunService")
+    while true do
+        local t0 = tick()
+        RunService.Heartbeat:Wait()
+        repeat until (t0 + 1/getgenv().altFPS) < tick()
+    end
+end
+
+spawn(controlFPS)
+
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+settings().Rendering.QualityLevel = 1
+UserSettings().GameSettings.MasterVolume = 0
+
+-- Anti-AFK Script
+local VirtualUser = game:GetService('VirtualUser')
+game.Players.LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+end)
