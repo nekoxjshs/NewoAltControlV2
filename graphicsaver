@@ -1,0 +1,445 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AutoFarmScreen = Instance.new("ScreenGui")
+local BackGroundBlack = Instance.new("Frame")
+local CashEarnedLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local StartingCashLabel = Instance.new("TextLabel")
+local CurrentCashLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local StartingCashLabel_2 = Instance.new("TextLabel")
+local StartCashLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local StartingCashLabel_3 = Instance.new("TextLabel")
+local VarsityAutoFarmText = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local PlayerImage = Instance.new("ImageLabel")
+local UICorner_4 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local Display = Instance.new("TextLabel")
+local Username = Instance.new("TextLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local VersionLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local CreditLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local TotalTime = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local TimePlayedLabel = Instance.new("TextLabel")
+local FPSLabel = Instance.new("TextLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
+
+--Properties:
+
+AutoFarmScreen.Name = "AutoFarmScreen"
+AutoFarmScreen.Parent = game.CoreGui
+AutoFarmScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BackGroundBlack.Name = "BackGroundBlack"
+BackGroundBlack.Parent = AutoFarmScreen
+BackGroundBlack.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BackGroundBlack.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BackGroundBlack.BorderSizePixel = 0
+BackGroundBlack.Position = UDim2.new(-0.275000006, 0, -0.328000009, 0)
+BackGroundBlack.Size = UDim2.new(1.41999996, 0, 1.68599999, 0)
+
+CashEarnedLabel.Name = "CashEarnedLabel"
+CashEarnedLabel.Parent = BackGroundBlack
+CashEarnedLabel.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+CashEarnedLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CashEarnedLabel.BorderSizePixel = 0
+CashEarnedLabel.Position = UDim2.new(0.542999983, 0, 0.595892727, 0)
+CashEarnedLabel.Size = UDim2.new(0, 115, 0, 25)
+CashEarnedLabel.Font = Enum.Font.Unknown
+CashEarnedLabel.Text = "Loading..."
+CashEarnedLabel.TextColor3 = Color3.fromRGB(60, 255, 0)
+CashEarnedLabel.TextSize = 12.000
+
+UICorner.CornerRadius = UDim.new(0, 6)
+UICorner.Parent = CashEarnedLabel
+
+StartingCashLabel.Name = "StartingCashLabel"
+StartingCashLabel.Parent = CashEarnedLabel
+StartingCashLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartingCashLabel.BackgroundTransparency = 1.000
+StartingCashLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartingCashLabel.BorderSizePixel = 0
+StartingCashLabel.Position = UDim2.new(-0.769130528, 0, -0.0130004883, 0)
+StartingCashLabel.Size = UDim2.new(0, 73, 0, 24)
+StartingCashLabel.Font = Enum.Font.Unknown
+StartingCashLabel.Text = "Cash Earned:"
+StartingCashLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartingCashLabel.TextSize = 12.000
+
+CurrentCashLabel.Name = "CurrentCashLabel"
+CurrentCashLabel.Parent = BackGroundBlack
+CurrentCashLabel.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+CurrentCashLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CurrentCashLabel.BorderSizePixel = 0
+CurrentCashLabel.Position = UDim2.new(0.542999983, 0, 0.658999979, 0)
+CurrentCashLabel.Size = UDim2.new(0, 115, 0, 25)
+CurrentCashLabel.Font = Enum.Font.Unknown
+CurrentCashLabel.Text = "Loading..."
+CurrentCashLabel.TextColor3 = Color3.fromRGB(60, 255, 0)
+CurrentCashLabel.TextSize = 12.000
+
+UICorner_2.CornerRadius = UDim.new(0, 6)
+UICorner_2.Parent = CurrentCashLabel
+
+StartingCashLabel_2.Name = "StartingCashLabel"
+StartingCashLabel_2.Parent = CurrentCashLabel
+StartingCashLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartingCashLabel_2.BackgroundTransparency = 1.000
+StartingCashLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartingCashLabel_2.BorderSizePixel = 0
+StartingCashLabel_2.Position = UDim2.new(-0.769130528, 0, -0.0130004883, 0)
+StartingCashLabel_2.Size = UDim2.new(0, 73, 0, 24)
+StartingCashLabel_2.Font = Enum.Font.Unknown
+StartingCashLabel_2.Text = "Current Cash:"
+StartingCashLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartingCashLabel_2.TextSize = 12.000
+
+StartCashLabel.Name = "StartCashLabel"
+StartCashLabel.Parent = BackGroundBlack
+StartCashLabel.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+StartCashLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartCashLabel.BorderSizePixel = 0
+StartCashLabel.Position = UDim2.new(0.543045759, 0, 0.532857597, 0)
+StartCashLabel.Size = UDim2.new(0, 115, 0, 25)
+StartCashLabel.Font = Enum.Font.Unknown
+StartCashLabel.Text = "Loading..."
+StartCashLabel.TextColor3 = Color3.fromRGB(60, 255, 0)
+StartCashLabel.TextSize = 12.000
+
+UICorner_3.CornerRadius = UDim.new(0, 6)
+UICorner_3.Parent = StartCashLabel
+
+StartingCashLabel_3.Name = "StartingCashLabel"
+StartingCashLabel_3.Parent = StartCashLabel
+StartingCashLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+StartingCashLabel_3.BackgroundTransparency = 1.000
+StartingCashLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+StartingCashLabel_3.BorderSizePixel = 0
+StartingCashLabel_3.Position = UDim2.new(-0.829904318, 0, -0.012727051, 0)
+StartingCashLabel_3.Size = UDim2.new(0, 80, 0, 24)
+StartingCashLabel_3.Font = Enum.Font.Unknown
+StartingCashLabel_3.Text = "Starting Cash:"
+StartingCashLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+StartingCashLabel_3.TextSize = 12.000
+
+VarsityAutoFarmText.Name = "VarsityAutoFarmText"
+VarsityAutoFarmText.Parent = BackGroundBlack
+VarsityAutoFarmText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VarsityAutoFarmText.BackgroundTransparency = 1.000
+VarsityAutoFarmText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VarsityAutoFarmText.BorderSizePixel = 0
+VarsityAutoFarmText.Position = UDim2.new(0.407633692, 0, 0.111728691, 0)
+VarsityAutoFarmText.Size = UDim2.new(0.323068619, 0, 0.162422761, 0)
+VarsityAutoFarmText.Font = Enum.Font.LuckiestGuy
+VarsityAutoFarmText.Text = "Varsity Premium AutoFarm"
+VarsityAutoFarmText.TextColor3 = Color3.fromRGB(255, 255, 255)
+VarsityAutoFarmText.TextSize = 31.000
+
+UIAspectRatioConstraint.Parent = VarsityAutoFarmText
+UIAspectRatioConstraint.AspectRatio = 2.953
+
+PlayerImage.Name = "PlayerImage"
+PlayerImage.Parent = BackGroundBlack
+PlayerImage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerImage.BackgroundTransparency = 1.000
+PlayerImage.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerImage.BorderSizePixel = 0
+PlayerImage.Position = UDim2.new(0.491277635, 0, 0.234119758, 0)
+PlayerImage.Size = UDim2.new(0.113494195, 0, 0.181281403, 0)
+PlayerImage.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_4.CornerRadius = UDim.new(0, 100)
+UICorner_4.Parent = PlayerImage
+
+UIAspectRatioConstraint_2.Parent = PlayerImage
+UIAspectRatioConstraint_2.AspectRatio = 0.980
+
+Display.Name = "Display"
+Display.Parent = BackGroundBlack
+Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Display.BackgroundTransparency = 1.000
+Display.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Display.BorderSizePixel = 0
+Display.Position = UDim2.new(0.500104845, 0, 0.44080615, 0)
+Display.Size = UDim2.new(0.0949343666, 0, 0.0308278371, 0)
+Display.Font = Enum.Font.Unknown
+Display.Text = "PlayerDisplay"
+Display.TextColor3 = Color3.fromRGB(255, 255, 255)
+Display.TextSize = 21.000
+
+Username.Name = "Username"
+Username.Parent = BackGroundBlack
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.482765406, 0, 0.472048253, 0)
+Username.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+Username.Font = Enum.Font.Unknown
+Username.Text = "PlayerUser"
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
+Username.TextSize = 15.000
+
+UIAspectRatioConstraint_3.Parent = Username
+UIAspectRatioConstraint_3.AspectRatio = 3.836
+
+VersionLabel.Name = "VersionLabel"
+VersionLabel.Parent = BackGroundBlack
+VersionLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VersionLabel.BackgroundTransparency = 1.000
+VersionLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VersionLabel.BorderSizePixel = 0
+VersionLabel.Position = UDim2.new(0.233858153, 0, 0.69890666, 0)
+VersionLabel.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+VersionLabel.Font = Enum.Font.Unknown
+VersionLabel.Text = "Version: 1.0"
+VersionLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+VersionLabel.TextSize = 11.000
+
+UIAspectRatioConstraint_4.Parent = VersionLabel
+UIAspectRatioConstraint_4.AspectRatio = 3.836
+
+CreditLabel.Name = "CreditLabel"
+CreditLabel.Parent = BackGroundBlack
+CreditLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditLabel.BackgroundTransparency = 1.000
+CreditLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CreditLabel.BorderSizePixel = 0
+CreditLabel.Position = UDim2.new(0.233858153, 0, 0.731127143, 0)
+CreditLabel.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+CreditLabel.Font = Enum.Font.Unknown
+CreditLabel.Text = "UI Made By kobe0921"
+CreditLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditLabel.TextSize = 11.000
+
+UIAspectRatioConstraint_5.Parent = CreditLabel
+UIAspectRatioConstraint_5.AspectRatio = 3.836
+
+TotalTime.Name = "TotalTime"
+TotalTime.Parent = BackGroundBlack
+TotalTime.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+TotalTime.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TotalTime.BorderSizePixel = 0
+TotalTime.Position = UDim2.new(0.542999983, 0, 0.720810711, 0)
+TotalTime.Size = UDim2.new(0, 115, 0, 25)
+TotalTime.Font = Enum.Font.Unknown
+TotalTime.Text = "Loading..."
+TotalTime.TextColor3 = Color3.fromRGB(255, 255, 255)
+TotalTime.TextSize = 12.000
+
+UICorner_5.CornerRadius = UDim.new(0, 6)
+UICorner_5.Parent = TotalTime
+
+TimePlayedLabel.Name = "TimePlayedLabel"
+TimePlayedLabel.Parent = TotalTime
+TimePlayedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TimePlayedLabel.BackgroundTransparency = 1.000
+TimePlayedLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TimePlayedLabel.BorderSizePixel = 0
+TimePlayedLabel.Position = UDim2.new(-0.769130528, 0, -0.0130004883, 0)
+TimePlayedLabel.Size = UDim2.new(0, 73, 0, 24)
+TimePlayedLabel.Font = Enum.Font.Unknown
+TimePlayedLabel.Text = "Time Elapsed:"
+TimePlayedLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TimePlayedLabel.TextSize = 12.000
+
+FPSLabel.Name = "FPSLabel"
+FPSLabel.Parent = BackGroundBlack
+FPSLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPSLabel.BackgroundTransparency = 1.000
+FPSLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FPSLabel.BorderSizePixel = 0
+FPSLabel.Position = UDim2.new(0.233858153, 0, 0.66537106, 0)
+FPSLabel.Size = UDim2.new(0.149645388, 0, 0.0538687594, 0)
+FPSLabel.Font = Enum.Font.Unknown
+FPSLabel.Text = "FPS:"
+FPSLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPSLabel.TextSize = 11.000
+
+UIAspectRatioConstraint_6.Parent = FPSLabel
+UIAspectRatioConstraint_6.AspectRatio = 3.836
+
+-- Scripts:
+
+local function LSBMMVC_fake_script() -- CashEarnedLabel.CashEarnedScript 
+	local script = Instance.new('LocalScript', CashEarnedLabel)
+
+	wait(5)
+	
+	local player = game.Players.LocalPlayer
+	local currencyTextLabel = script.Parent
+		local totalCurrency = player:WaitForChild("DataFolder").Currency.Value
+	
+	-- Function to update the profit display
+	local function updateProfitDisplay()
+		local currentCurrency = player:WaitForChild("DataFolder").Currency.Value
+		local currencyChange = currentCurrency - totalCurrency
+	
+		if currencyChange > 0 then
+			currencyTextLabel.Text = "+$" .. currencyChange
+		else
+			currencyTextLabel.Text = "+$0"
+		end
+	end
+	
+	-- Connect the update function to changes in currency
+	player:WaitForChild("DataFolder").Currency.Changed:Connect(updateProfitDisplay)
+	
+	-- Update the display initially
+	updateProfitDisplay()
+	
+end
+coroutine.wrap(LSBMMVC_fake_script)()
+local function JVGUJD_fake_script() -- CurrentCashLabel.CurrentCashScript 
+	local script = Instance.new('LocalScript', CurrentCashLabel)
+
+	wait(5)
+	
+	local player = game.Players.LocalPlayer
+	local currencyTextLabel = script.Parent
+		local totalCurrency = player:WaitForChild("DataFolder").Currency.Value
+	
+	-- Function to update the currency display
+	local function updateCurrencyDisplay()
+		local currentCurrency = player:WaitForChild("DataFolder").Currency.Value
+		local currencyChange = currentCurrency - totalCurrency
+	
+		totalCurrency = totalCurrency + currencyChange
+	
+		local sign = (totalCurrency >= 0) and "" or ""
+		currencyTextLabel.Text = "$" .. sign .. totalCurrency
+	end
+	
+	-- Connect the update function to changes in currency
+	player:WaitForChild("DataFolder").Currency.Changed:Connect(updateCurrencyDisplay)
+	
+	-- Update the display initially
+	updateCurrencyDisplay()
+end
+coroutine.wrap(JVGUJD_fake_script)()
+local function WKFI_fake_script() -- StartCashLabel.StartCashScript 
+	local script = Instance.new('LocalScript', StartCashLabel)
+
+	wait(5)
+	
+	local player = game.Players.LocalPlayer
+	local dataFolder = player:WaitForChild("DataFolder")
+	local currencyTextLabel = script.Parent
+	
+		-- Display the player's starting currency in the TextLabel
+		currencyTextLabel.Text = "$" .. tostring(dataFolder.Currency.Value)
+end
+coroutine.wrap(WKFI_fake_script)()
+local function NIPA_fake_script() -- Display.LocalScript 
+	local script = Instance.new('LocalScript', Display)
+
+	local frame = script.Parent
+	
+	local player = game.Players.LocalPlayer
+	
+	frame.Text = "" .. player.DisplayName
+end
+coroutine.wrap(NIPA_fake_script)()
+local function NSBLG_fake_script() -- Username.LocalScript 
+	local script = Instance.new('LocalScript', Username)
+
+	local frame = script.Parent
+	
+	local player = game.Players.LocalPlayer
+	
+	frame.Text = "" .. player.Name
+end
+coroutine.wrap(NSBLG_fake_script)()
+local function NBKKJ_fake_script() -- TotalTime.TotalTimeScript 
+	local script = Instance.new('LocalScript', TotalTime)
+
+	local textLabel = script.Parent -- Assume the script is placed directly inside the TextLabel
+	
+	local startTime = os.time()
+	
+	-- Function to update the time display
+	local function updateDisplay()
+		local currentTime = os.time() - startTime
+	
+		local days = math.floor(currentTime / (60 * 60 * 24))
+		local hours = math.floor((currentTime % (60 * 60 * 24)) / (60 * 60))
+		local minutes = math.floor((currentTime % (60 * 60)) / 60)
+		local seconds = currentTime % 60
+	
+		textLabel.Text = string.format("%dd %dh %dm %ds", days, hours, minutes, seconds)
+	end
+	
+	-- Update the display every second
+	while wait(1) do
+		updateDisplay()
+	end
+end
+coroutine.wrap(NBKKJ_fake_script)()
+local function QPWD_fake_script() -- BackGroundBlack.PlayerImageScript 
+	local script = Instance.new('LocalScript', BackGroundBlack)
+
+	 local frame = script.Parent
+	
+	
+	
+	local player = game.Players.LocalPlayer
+	
+	
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.AvatarBust
+	local thumbSize = Enum.ThumbnailSize.Size180x180
+	
+	local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	frame.PlayerImage.Image = content
+end
+coroutine.wrap(QPWD_fake_script)()
+local function MOHT_fake_script() -- FPSLabel.FPSScript 
+	local script = Instance.new('LocalScript', FPSLabel)
+
+	local RunService = game:GetService('RunService')
+	local framesloaded = 0
+	
+	RunService.RenderStepped:Connect(function()
+		framesloaded += 1
+	end)
+	
+	while true do
+		wait(1)
+		script.Parent.Text = "FPS: " .. framesloaded
+		framesloaded = 0
+	end
+end
+coroutine.wrap(MOHT_fake_script)()
+local function PCVQNPJ_fake_script() -- BackGroundBlack.FrameLimit10 
+	local script = Instance.new('LocalScript', BackGroundBlack)
+
+	local RunService = game:GetService("RunService")
+	local MaxFPS = 10
+	while true do
+		local t0 = tick()
+		RunService.Heartbeat:Wait()
+		repeat until (t0 + 1/MaxFPS) < tick()
+	end
+end
+coroutine.wrap(PCVQNPJ_fake_script)()
+local function ZOWBXRD_fake_script() -- AutoFarmScreen.AFKStop 
+	local script = Instance.new('Script', AutoFarmScreen)
+
+	local bb = game:service('VirtualUser')
+	game:service('Players').LocalPlayer.Idled:Connect(function()
+		bb:CaptureController()
+		bb:ClickButton2(Vector2.new())
+		wait(2)
+	end)
+end
+coroutine.wrap(ZOWBXRD_fake_script)()
